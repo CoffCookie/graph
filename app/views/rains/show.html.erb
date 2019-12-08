@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Month:</strong>
+  <%= @rain.month %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @rain.quantity %>
+</p>
+
+<%= link_to 'Edit', edit_rain_path(@rain) %> |
+<%= link_to 'Back', rains_path %>

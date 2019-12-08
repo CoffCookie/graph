@@ -1,0 +1,27 @@
+<%= form_with(model: rain, local: true) do |form| %>
+  <% if rain.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(rain.errors.count, "error") %> prohibited this rain from being saved:</h2>
+
+      <ul>
+        <% rain.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :month %>
+    <%= form.text_field :month %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantity %>
+    <%= form.number_field :quantity %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
