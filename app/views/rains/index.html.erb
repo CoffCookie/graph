@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Rains</h1>
-<%= pie_chart Rain.pluck(:month, :quantity),
+<%= column_chart Rain.pluck(:month, :quantity),
                  id: 'total-attendance-chart',
                  width: '400px',
                  height: '500px' %>
