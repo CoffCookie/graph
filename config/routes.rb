@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root  'rains#index'
   resources :rains
 
 
